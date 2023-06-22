@@ -1,12 +1,11 @@
 const { VueLoaderPlugin } = require("vue-loader");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: path.join(__dirname, "src/main.js"),
-  devtool: "source-map",
+  entry: {
+    bundle: './src/main.js',
+  },
   module: {
     rules: [
       {
@@ -35,29 +34,32 @@ module.exports = {
           "postcss-loader",
         ],
       },
-    ],
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-syntax-dynamic-import']
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "public/index.html"),
-    }),
     new MiniCssExtractPlugin(),
   ],
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+  },
   devServer: {
     open: true,
-    devMiddleware: {
-      writeToDisk: true,
-    },
+    hot: true,
     static: {
-      watch: true,
-    },
-  },
-  optimization: {
-    minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      "...",
-      new CssMinimizerPlugin(),
-    ],
-  },
+      watch: false,
+    }
+  }
 };

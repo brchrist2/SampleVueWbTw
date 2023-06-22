@@ -90,7 +90,7 @@
               <div
                 class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl dark:bg-blue-900 dark:text-white"
               >
-                <div>I'm ok what about you?</div>
+                <div>I'm ok what about you</div>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@
                 class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl dark:bg-blue-900 dark:text-white"
               >
                 <div>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing. ?
+                  Lorem ipsum dolor seit, amet consectetur adipisicing. ?
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@
               <div
                 class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl dark:bg-gray-800 dark:text-white"
               >
-                <div>Lorem ipsum dolor sit amet !</div>
+                <div>Lorem ipsum dolor sit amat !</div>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@
                 class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl dark:bg-gray-800 dark:text-white dark:bg-blue-900 dark:text-white"
               >
                 <div>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing. ?
+                  Lorem ipsum dolor sit, amet consectetur fuckerdessey. ?
                 </div>
                 <div
                   class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-gray-400"
